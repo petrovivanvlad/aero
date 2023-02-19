@@ -46,7 +46,7 @@ INSERT INTO warehouse.random_cannabis
      )
 SELECT
     (src.data ->> 'id')::INTEGER            AS random_cannabis_id,
-    (src.data ->> 'uid')::UUID     AS random_cannabis_bid,
+    (src.data ->> 'uid')::UUID              AS random_cannabis_bid,
     src.data ->> 'strain'                   AS random_cannabis_strain,
     src.data ->> 'cannabinoid_abbreviation' AS random_cannabis_cannabinoid_abbreviation,
     src.data ->> 'cannabinoid'              AS random_cannabis_cannabinoid,
